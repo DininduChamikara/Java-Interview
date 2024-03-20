@@ -127,6 +127,7 @@ Six Steps:
 ---------------------------
 
 ## SQL Interview Questions
+video - https://www.youtube.com/watch?v=FJdryrcDD2s
 
 1. How to find the third height Salary?
 
@@ -143,8 +144,43 @@ Six Steps:
 
 LIMIT 2, 1
 
-2 = Starting Index
-1 = number of rows
+* 2 = Starting Index
+* 1 = number of rows
+----------------------------
 
+2. What are Indexes and How to create an index in SQL?
 
+* Indexes are database objects which help in retrieving records quickly and more efficiently.
 
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/c584fdec-4e05-457f-9d18-608902ef23c2)
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/efc7e7ba-856a-497d-a858-19f0f5e9fe9b)
+
+--------------------------
+
+3. How does the index work?
+
+Suppose we need to search by employee name = Manoj
+
+* Behind the scene every single row is checked to see if the employee_name matches with Manoj. (full table scan)
+* An index is a data structure that stores the values for a certain specific column of a table and helps avoid a full table scan.
+* Database indexing in reality, allows us to cut down the number of rows that need to be examined when a select query with a where clause is executed.
+
+* In SQL,
+     - When you create an index, SQL creates a binary tree in a sorted way.
+     - then stored that data.
+     - 
+--------------------------
+
+4. Disadvantages of indexes?
+
+* Indexes take additional space.
+* Every time you perform an add, delete, or update operation, the same operation will need to be performed on the index as well.
+--------------------------
+
+5. If we drop a table, does it also drop related objects like constraints, indexes, columns, default, views, and stored procedures?
+
+* Yes, the SQL server drops all related objects, that exist inside a table like constraints, indexes, columns, defaults, etc.
+* But dropping a table will not drop views and sorted procedures as they exist outside the table. 
+
+---------------------------
