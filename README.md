@@ -34,6 +34,10 @@ JIT - Just In Time Compilar
 * Interpreter goes line by line. (It decreases efficiency)
 * JIT optimizes the performance in Run time.
 * JIT compiles a bunch of code without interpreting.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/a7422ffa-f526-4a2e-9854-e5e6fe41e9bf)
+
+
 -----------------------
 
 4. Why String is immutable in Java?
@@ -121,3 +125,26 @@ Six Steps:
 * But now you need one object. So, to create one single object you have to create a private static instance of that class itself. 
 
 ---------------------------
+
+## SQL Interview Questions
+
+1. How to find the third height Salary?
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/d7f77e4d-e5ca-403d-b20e-070e4b11167d)
+
+* The Below solution is good for the first numbers of the highest salaries.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/350f4cea-8587-4755-ac4e-252eee2cdfe1)
+
+
+* For third highest salary,
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/699d8bd7-75b1-4309-a1c0-572a1ba682ba)
+
+LIMIT 2, 1
+
+2 = Starting Index
+1 = number of rows
+
+
+
