@@ -131,6 +131,110 @@ Six Steps:
 
 ---------------------------
 
+## Exception Handling Interview Questions - Basic Level
+
+1. What is an exception?
+
+* Exception is an event that occurs during the execution of a program and disrupts the normal flow of the program.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/df242259-ed12-4eb1-b867-55ac8f8dfe9d)
+
+-------------------
+
+2. How do we handle exceptions in Java?
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/7ec2af42-08b0-46be-82e5-4eceb6606125)
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/c9209c02-5ac9-4163-b77d-46d19fbca185)
+
+------------------
+
+3. Hierarchy of exception handling
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/60deb3a8-6ca4-4f53-9719-12e5640ed1c3)
+
+* Checked Exceptions are compiled time exceptions.
+* Unchecked Exceptions are Runtime Exceptions.
+  - The compiler has no idea about these exceptions.
+
+-----------------
+
+4. Difference between Exception Vs Error
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/fd89a471-b5f4-48d9-8b0b-5ff17f06238f)
+
+* Compiler does not have any knowledge about Unchecked Exceptions and Errors.
+* Compiler have knowledge about Checked Exceptions.
+* Exceptions are related to the application.
+* Errors are related to the environment where the application is running.
+
+--------------------------
+
+5. Can we write only try block without a catch and finally blocks?
+
+* No, either catch or finally is a must.
+* if no then what error will come?
+* Answer: compile time error saying "insert finally to complete try statement" like this.
+
+---------------------------
+
+6. Can we write any other statements between try catch or finally block?
+
+* No
+
+--------------------------
+
+7. Do the remaining statements in the try block execute after the exception occurs?
+
+* No
+
+--------------------------
+
+8. What is the difference between Trrow and Throws Keywords in Java?
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/d82050a9-6e27-4904-b8b6-f7daa4589760)
+
+--------------------------
+
+9. What happens when an Exception is Thrown by the Main Method?
+
+* WHen an exception is thrown by main() method, Java Runtime terminates the program and prints the exception message and the stack trace in-system console.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/3eb02e58-76ca-4159-a9de-8f3738ca902c)
+
+* JRE handle that.
+
+---------------------------
+
+10. What do you understand by unreachable catch block error.
+
+* This error comes when you keep super class first and sub classes later. Like here we kept Exception which is parent of NullPointer Exception first.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/ee539a5e-622d-44a2-b20d-acd8797f6e84)
+
+* Hence the order of catch blocks must be from most specific to the most general ones. 
+
+--------------------------
+
+11. What is Multi Catch block?
+
+* To reduce code duplication and makes it easier to maintain
+* Java 7 came up with it.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/83ad6a0a-0f8c-47ee-8fbf-b82c38c0546d)
+
+---------------------------
+
+12. What is the DIfference between Final, Finally, and Finalize in Java?
+
+* final: It is a keyword is used to apply restrictions on the class, method, and variable. The final class can't be inherited final method can it be overridden and final variable cannot be changed.
+  
+* finally: used with the try-catch block. Usually finally is used to close resources.
+
+* finalize: used to perform clean up processing just before the object is garbage collected. 
+
+---------------------------
+
 ## Top Tricky Interview Questions on Collection Framework
 video - https://www.youtube.com/watch?v=KfoNYoVUBJI&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1&index=2
 
