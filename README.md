@@ -75,7 +75,9 @@ immutable = you cannot modify once the object is created.
 * For static methods if you create a similar method with same return type and same method arguments in child class then it will hide the superclass method, this is known as method hiding.
 
 * You should always call the static method with the class name.
-* With the object reference you can call static methods. You will not get any error. But you should not. 
+* With the object reference you can call static methods. You will not get any error. But you should not.
+
+* Static methods are related to the class. Not for the object reference. 
 --------------------------
 
 7. Does "finally" always execute in Java?
