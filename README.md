@@ -281,7 +281,20 @@ video - https://www.youtube.com/watch?v=KfoNYoVUBJI&list=PLyHJZXNdCXscoyL5XEZoHH
 
 ---------------------------
 
+6. Internal working of hash map
 
+* HashMap in Java works on hashing principle where hash functions are used to link key and value in Hashmap, Objects are stored by calling put(key, value) method of HashMap and retrieved by calling get(key) method.
+
+* When we call put method, hashcode() method of the key object is called which calculates an index of the bucket location where we can store the value object.
+
+* To retrieve, you call the get() method and again pass the key object, which lands you up at the same index or bucket and you retrieve the value object.
+
+
+* If two different keys return the same hash index then collision occurs. In this case, a linked list is formed at that bucket location and a new entry is stored as next node.
+
+* Now put method will just append the object nodes in the linked list.
+
+* But in the case of get if we have a linked list at that index then we need an extra check to search correct value, this is done by equals() method. It checks every key of every node and if equals() returns true, then Map return that corresponding value from the linked list. 
 
 ---------------------------
 
