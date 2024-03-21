@@ -1,6 +1,11 @@
 # Java Interview 
 This repository is designed to help you to face Java interviews with confidence.
 
+## Important Points 
+
+* In object-oriented programming, a synchronized method is a method that can only be accessed by one thread at a time, while a non-synchronized method can be accessed by multiple threads simultaneously.
+* Exception is an event which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.”
+
 ## Top Tricky interview Questions on core java
 video - https://www.youtube.com/watch?v=PwiuAebCruY
 
@@ -122,7 +127,161 @@ Six Steps:
 ![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/56a81a37-a25e-4120-8060-36e1c00353d7)
 
 * Make your constructor private - no body can create object of it.
-* But now you need one object. So, to create one single object you have to create a private static instance of that class itself. 
+* But now you need one object. So, to create one single object you have to create a private static instance of that class itself.
+
+---------------------------
+
+## Top Tricky Interview Questions on Collection Framework
+video - https://www.youtube.com/watch?v=KfoNYoVUBJI&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1&index=2
+
+1. Explain Collection Hierarchy
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/02c358f6-d684-42f9-8140-5f4cc706f2dc)
+
+
+* java.util.Collection is the root of the Java Collection framework and most of the collections in Java are inherited from this interface except Map Interface.
+* The 3 basic interfaces which implement / extend the collection framework:
+  * List
+  * Queue
+  * Set
+
+* List
+  - Contains ordered elements.
+  - May include duplicates.
+  - Supports the index-based search, random access but elements can be easily inserted irrespective of the position.
+ 
+* Set
+  - Doesn't define an order for the elements hence index based search is not supported.
+  - Doesn't contain duplicates. 
+
+* Queue
+  - follows a FIFO approach
+
+* Map
+  - Represent Key, Value pair
+  - Map interface does not implement the Collection.
+  - It can only contain a unique key.
+  - Can have duplicate values.
+
+### List Interface
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/614977ef-0317-4a48-8e0e-fa8076c88427)
+
+* ArrayList
+  - Dynamic resizing -> 50% from original size
+  - Non synchronized
+
+* Linked list
+  - implements List and Deque interfaces.
+  - maintains the insertion order.
+  - Non syncronized.
+  - does not support accessing elements randomly. Only iterate through the linked list.
+
+* Vector
+  - Vector is synchronized.
+  - maintains the insertion order.
+  - It's Thread safe.
+  - Vactor increases its size by doubling the array size.
+
+* Stack
+  - follows the LIFO approach
+
+
+### Set Interface
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/1962083c-ba9d-4d8b-9dab-908822d2b959)
+
+* Hash Set
+  - It implicitly implements a hashtable.
+  - Contains only unique elements.
+  - only one null element can be added.
+  - It is unordered as set.
+
+* Linked HashSet
+   - ordered version of HashSet which maintains a doubly-linked List across all elements.
+   - It preserves the insertion order. 
+
+* Sorted Set
+  - All elements of a SortedSet must implement the Comparable interface.
+  - It's a set sorted in an ascending order.
+ 
+* Tree Set
+  - Uses a Tree for storage
+  - Objects in a TreeSet are stored in a sorted and ascending order.
+
+
+### Queue Interface
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/3c1abc3a-df30-4a4d-81fa-49e819042d71)
+
+* Priority Queue
+  - Priority Queue is a queue with priority associated with each element.
+  - A high-priority element is served before a low-priority element irrespective of their insertion order. 
+
+* Deque
+  - Deque Refers to a double-ended queue.
+  - Elements can be added and removed from either end. 
+
+* ArrayDeQue
+  - Way to apply resizable array in addition to the implementation of the Deque interface.
+  - no capacity restrictions.
+ 
+
+### Map Interface
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/e92acc61-70f2-479f-93e6-a337c6173345)
+
+* Hash Map
+  - It is non-synchronized in nature.
+  - Allows only one null key but multiple null values.
+
+* Hash Table
+  - It is synchronized in nature.
+  - Doesn't allow any null key or value.
+
+* Sorted Map
+  - entries are maintained in an ascending key order.
+------------------------- 
+
+2. Why Map doesn't extend the Collection Interface?
+
+* The Map Interface in Java follows a key/value pair structure.
+* Collection interface is a collection of objects that are stored in a structured manner with a specified access mechanism.
+* The main reason Map doesn't extend the Collection interface is that the add(E e) method of the Collection interface doesn't support the key-value pair like the Map interface's put(K, V) method.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/99a7bbd5-4f75-4160-baf9-035e8313bc73)
+
+
+---------------------------
+
+3. Difference between fail-fast and fail-safe iterators
+
+* Fail-fast Iterators throws ConcurrentModificationException when one Thread is iterating over collection object and other thread structurally modify Collection either by adding, removing or modifying objects on underlying collection. They are called fail-fast because they try to immediately throw Exception when they encounter failure.
+
+* Fail-safe iterator doesn't throw any Exception if Collection is modified structurally while one thread is Iterating over it because they work on a clone of Collection instead of the original collection and that's why they are called as fail-safe iterator. 
+
+---------------------------
+
+4. What do you understand by BlockingQueue?
+
+* The Java BlockingQueue interface, java.util.concurrent.BlockingQueue, represent a queue which is thread safe to put elements into, and take elements out of from. In other words, multiple threads can be inserting and taking elements concurrently from a Java Blockingueue, without any concurrency issues arising.
+
+* It is capable of blocking the threads that try to insert or take elements from the queue. For instance, if a thread tries to take an element and there are none left in the queue, the thread can be blocked until there is an element to take. 
+--------------------------
+
+5. Difference between Synchronized Collection and Concurrent Collection?
+
+* Both provide thread-safety.
+* The differences between them come in performance, scalability and how they achieve thread-safety.
+* Syncronized collections like syncronized HashMap are much slower than their concurrent counterparts.
+ e.g. ConcurrentHashMap
+ - Main reason for this slowness is locking.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/8bf22d44-aaa3-4ee3-a9ef-e13222e0bec2)
+
+---------------------------
+
+
 
 ---------------------------
 
