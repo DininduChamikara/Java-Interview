@@ -5,6 +5,87 @@ This repository is designed to help you to face Java interviews with confidence.
 
 * In object-oriented programming, a synchronized method is a method that can only be accessed by one thread at a time, while a non-synchronized method can be accessed by multiple threads simultaneously.
 * Exception is an event which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.”
+* Concrete classes are Java classes that have code that implements all their methods, and method bodies are complete. Concrete classes in Java are known as 100% implemented classes. A concrete class can be instantiated as an object.
+
+## Is Java Pass by value or pass-by-reference
+video link - https://www.youtube.com/watch?v=w4sGl3HxgZw&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1&index=3
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/5b212e36-9cdf-4db2-a2be-5e292b4f0fc3)
+
+### Pass by reference
+(Lecturer gives original note to the student)
+
+* Pass the memory address of the variable (pointer).
+* If you modify it anywhere the original value will be modified.
+* You are changing the real value of the memory.
+
+### Pass by value 
+(Lecturer gives a copy of notes to the student)
+
+* value for function parameters copy into another location in your memory, rather than passing to the real memory address.
+
+* So, Java pass by value.
+
+
+## Diamond Problem
+video link - https://www.youtube.com/watch?v=0pCyqDAGafY&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1&index=23
+
+1. Why multiple inheritance was not possible with classes?
+* If 2 or more parent classes have the same methods then the child class extending both parents will be confused as to which method is to be given the preference. So, that is the Diamond Problem.
+
+* Hence Interfaces solves that problem initially. They help us to implement multiple inheritance.
+* But, consider the scenario where 2 or more interfaces have the same default methods implemented in respective interfaces. Then child classes implementing both interfaces will be confused about which default implementation to accept.
+
+------------------------
+
+## Design Pattern Interview Questions
+video link - https://www.youtube.com/watch?v=JFvSCobD7JU&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1&index=24
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/58f13ced-6bdb-4dec-a598-7bd0c8751954)
+
+1. Why do we need Design Patterns?
+* Well-documented and understood by software architects, designers, and developers. (well understood)
+* Tired and tested solutions to common problems. Reduce the technical risk.
+* Save the time.
+* Can apply any language that supports object orientation.
+* The final product can be easier to maintain.
+
+2. What are the creational design patterns?
+* Creational design patterns are related to the way of creating objects.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/a623b109-9696-4b8f-b49f-84fbc082702c)
+
+### Factory Pattern
+
+* Factory class returns required class instance.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/4d1829bb-d4b5-43fb-947b-4852808abb51)
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/277f4011-4cba-4717-a1d6-c6c5f26fc135)
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/d33cb517-c11a-4e76-b719-d5fa08a52d25)
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/21855eda-74bf-4887-94af-efa22a72da85)
+
+
+### Abstract Factory Design Pattern
+
+* Also called as factory of factories.
+* Abstract factory lets a class return a factory of classes.
+
+
+### Singleton Design Pattern
+
+* Only one instance can created.
+
+![image](https://github.com/DininduChamikara/Java-Interview/assets/73112985/89984c53-605e-49a1-bb8a-fb378c106eb9)
+
+
+### Builder Design Pattern
+
+* Constructing a complex object from simple objects using step by step approach.
+
+----------------------------
 
 ## Top Tricky interview Questions on core java
 video - https://www.youtube.com/watch?v=PwiuAebCruY
